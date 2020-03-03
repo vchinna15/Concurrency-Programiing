@@ -33,7 +33,20 @@ Notification:
 
 Reentrant Synchronization:
 
+Reentrant Lock: Similar to Intrinsic Lock
+
+External Locks: these are provided by java.util.concurrent.locks package. (Lock(I), ReentrantLock(C), ReentrantReadwriteLock(C))
+
+Special purpose Synchronizers: THis is provided by java.util.concurrent package to implement special purpose synchronization which can't be acheieved by default synchronization(intrinsic lock) provided by java.
+  - Semaphore
+  -CountDownLatch
+  -CyclicBarrier
+  -Phaser
+  -Exchanger
+
 Atomic Access: It's like DB Transaction. It's a single unit of execution. Still there may be synchronization required for atomic operation as memory consitency issue might happen. Some of the classes in the java.util.concurrent package provide atomic methods that do not rely on synchronization.
+
+
 
 
 
