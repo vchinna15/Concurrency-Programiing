@@ -1,4 +1,5 @@
-Concurrency means multiple threads executing a task. It reduces processing time. 
+Multithreading means a task is executed by multiple threads. It reduces processing time. 
+Concurrency means multiple threads are accessing a shared resource/object. 
 
 Key terminologies:
 
@@ -46,6 +47,10 @@ Special purpose Synchronizers: THis is provided by java.util.concurrent package 
 
 Atomic Access: It's like DB Transaction. It's a single unit of execution. Still there may be synchronization required for atomic operation as memory consitency issue might happen. Some of the classes in the java.util.concurrent package provide atomic methods that do not rely on synchronization.
 
+Best practices of multithreading:
+1. Avoid locking or Reduce scope of Synchronization
+2. Prefer Synchronizers(Semapbire, COuntdownLatch, exchanger, CyclicBarrier) over wait and notify
+3. Prefer Concurrent Collection over Synchronized Collectio
 
 
 
