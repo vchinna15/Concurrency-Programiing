@@ -8,7 +8,20 @@ public static void main(){
   new Thread(() -> processTax(user2)).start(); //Thrad2
   doSomeHeavyCalculations(); //Main thread }
     
- Concurrency means multiple threads are accessing a shared resource/object. 
+ Concurrency means multiple threads are accessing a shared resource/object. Another scenario is taht multiple threads are coordinating tyo complete a task.
+ Example:
+ public static void main(){
+ 	new Thread(() -> { 
+					if (ticketsAvailable>0)
+					bookTicket();
+					ticketsAvailable--;
+					 }).start();  //Thread 1 accessing shared resource -ticketsAvailable
+  	new Thread(() -> { 
+					if (ticketsAvailable>0)
+					bookTicket();
+					ticketsAvailable--;
+					 }).start();  //Thread 2 accessing shared resource -ticketsAvailable
+					doSomeHeavyCalc(); //Main thread
 
 
 Key terminologies:
