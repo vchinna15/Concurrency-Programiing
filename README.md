@@ -16,7 +16,7 @@ public static void main(){
   doSomeHeavyCalculations(); //Main thread }
   
     
- Concurrency means multiple threads are accessing a shared resource/object. Another scenario is taht multiple tasks need to be coordinted(Producer-Consumer Problem).
+ Concurrency means multiple threads are accessing a shared resource/object(Inter-Thread Communication). Another scenario is taht multiple tasks need to be coordinted(Producer-Consumer Problem).
  Example:
  public static void main(){
  	new Thread(() -> { 
@@ -37,6 +37,14 @@ Tools for COncurrency:
 	- concurrent data structures
 	- completablefuture
 	- countdownlatch /phaser/ cyclicbarrier/ semaphore
+
+Cocurrency + Parallelism:
+	1. Split teh sequential flow into independent tasks
+	2. use threads/threadpools to parallelize each independednt tasks(essentially these independet tasks run on individual thread)(parallellismm will speed up the process). Also use CompletableFuture to sequence the dependednt tasks within each independent flow
+	3. whenver shared resources needs to be updated, use concurrency tools
+	4. wheneve independent tasks(running on threads) need to coordinate, use concurrency tools
+	
+	
 Key terminologies:
 
 Process
