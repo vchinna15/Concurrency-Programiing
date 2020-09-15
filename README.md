@@ -1,16 +1,22 @@
 Multithreading means a task is executed by multiple threads. It reduces processing time. 
 
 Parellelism means independent tasks are executed by multiple threads. Example: process tax for each users parallely. Ensure taht the CPU has multiple core(one thread per core) so that you can have no.of threads equal or more than No.of Cores in the CPU. We can use Executor Framework to create threadpool and submit the tasks to them.
+Tools for Parralellism
+	- Threads
+	- ThreadPool
+		- ExecuterService
+		- ForkJoinPool
+		- Custom thread pools (Ex: Web Server)
 
 public static void main(){
   new Thread(() -> processTax(user1)).start(); //Thread 1
   
-  new Thread(() -> processTax(user2)).start(); //Thrad2
+  new Thread(() -> processTax(user2)).start(); //Thread2
   
   doSomeHeavyCalculations(); //Main thread }
   
     
- Concurrency means multiple threads are accessing a shared resource/object. Another scenario is taht multiple threads are coordinating tyo complete a task.
+ Concurrency means multiple threads are accessing a shared resource/object. Another scenario is taht multiple tasks need to be coordinted(Producer-Consumer Problem).
  Example:
  public static void main(){
  	new Thread(() -> { 
@@ -25,7 +31,12 @@ public static void main(){
 					 }).start();  //Thread 2 accessing shared resource -ticketsAvailable
 					doSomeHeavyCalc(); //Main thread
 
-
+Tools for COncurrency:
+	- Locks/synchronized
+	- Atomic classes
+	- concurrent data structures
+	- completablefuture
+	- countdownlatch /phaser/ cyclicbarrier/ semaphore
 Key terminologies:
 
 Process
