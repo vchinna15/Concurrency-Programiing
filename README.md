@@ -1,5 +1,13 @@
 Multithreading means a task is executed by multiple threads. It reduces processing time. 
-Concurrency means multiple threads are accessing a shared resource/object. 
+
+Parellelism means independent tasks are executed by multiple threads. Example: process tax for each users parallely. Ensure taht the CPU has multiple core(one thread per core) so that you can have no.of threads equal or more than No.of Cores in the CPU. We can use Executor Framework to create threadpool and submit the tasks to them.
+public static void main(){
+  new Thread(() -> processTax(user1)).start(); //Thread 1
+  new Thread(() -> processTax(user2)).start(); //Thrad2
+  doSomeHeavyCalculations(); //Main thread }
+  
+ Concurrency means multiple threads are accessing a shared resource/object. 
+
 
 Key terminologies:
 
