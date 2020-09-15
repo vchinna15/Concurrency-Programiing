@@ -5,8 +5,11 @@ Parellelism means independent tasks are executed by multiple threads. Example: p
 public static void main(){
 
   new Thread(() -> processTax(user1)).start(); //Thread 1
+  
   new Thread(() -> processTax(user2)).start(); //Thrad2
+  
   doSomeHeavyCalculations(); //Main thread }
+  
     
  Concurrency means multiple threads are accessing a shared resource/object. Another scenario is taht multiple threads are coordinating tyo complete a task.
  Example:
